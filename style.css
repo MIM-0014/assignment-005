@@ -1,0 +1,14 @@
+.tabBtn{
+
+padding:8px 16px;
+border-radius:6px;
+background:#e5e7eb;
+
+}
+
+.activeTab{
+
+background:#2563eb;
+color:white;
+
+}

@@ -1,6 +1,7 @@
 function renderIssues(issues){
 
-const container = document.getElementById("issuesContainer");
+const container =
+document.getElementById("issuesContainer");
 
 container.innerHTML = "";
 
@@ -43,5 +44,30 @@ card.onclick = ()=>showModal(issue);
 container.appendChild(card);
 
 });
+
+}
+
+
+function showModal(issue){
+
+const modal = document.getElementById("modal");
+
+modal.classList.remove("hidden");
+modal.classList.add("flex");
+
+document.getElementById("modalTitle").innerText = issue.title;
+
+document.getElementById("modalDesc").innerText =
+issue.description;
+
+document.getElementById("modalMeta").innerText =
+`Author: ${issue.author} | Priority: ${issue.priority} | Status: ${issue.status}`;
+
+}
+
+
+function closeModal(){
+
+document.getElementById("modal").classList.add("hidden");
 
 }

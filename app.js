@@ -1,5 +1,23 @@
 let issuesData = [];
 
+function showLoader(state){
+
+const loader =
+document.getElementById("loader");
+
+if(state){
+
+loader.classList.remove("hidden");
+
+}else{
+
+loader.classList.add("hidden");
+
+}
+
+}
+
+
 async function init(){
 
 showLoader(true);
@@ -44,7 +62,8 @@ issuesData.filter(i=>i.status==="closed")
 
 async function searchIssues(){
 
-const text = document.getElementById("searchInput").value;
+const text =
+document.getElementById("searchInput").value;
 
 const result = await searchIssueAPI(text);
 

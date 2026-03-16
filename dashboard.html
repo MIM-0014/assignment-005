@@ -4,19 +4,19 @@
 <head>
 
 <meta charset="UTF-8">
-<title>GitHub Issues Tracker</title>
+<title>Issues Tracker</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
+
 <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body class="bg-gray-100">
 
-<!-- NAVBAR -->
-
 <nav class="bg-white shadow p-4 flex justify-between">
 
-<h1 class="font-bold text-xl">
+<h1 class="text-xl font-bold">
 Issues Tracker
 </h1>
 
@@ -26,8 +26,7 @@ Issues Tracker
 class="border p-2 rounded"
 placeholder="Search issues">
 
-<button
-onclick="searchIssues()"
+<button onclick="searchIssues()"
 class="bg-blue-600 text-white px-4 py-2 rounded">
 
 Search
@@ -37,8 +36,6 @@ Search
 </div>
 
 </nav>
-
-<!-- TAB SECTION -->
 
 <section class="p-6">
 
@@ -59,14 +56,11 @@ Closed
 </div>
 
 <div id="loader" class="text-center hidden">
-
 Loading Issues...
-
 </div>
 
 <div id="issuesContainer"
 class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-
 </div>
 
 </section>
@@ -82,7 +76,8 @@ class="fixed inset-0 bg-black bg-opacity-40 hidden items-center justify-center">
 
 <p id="modalDesc"></p>
 
-<p id="modalMeta" class="text-sm text-gray-600 mt-2"></p>
+<p id="modalMeta"
+class="text-sm text-gray-600 mt-2"></p>
 
 <button onclick="closeModal()"
 class="mt-4 bg-red-500 text-white px-4 py-2 rounded">
@@ -100,5 +95,4 @@ Close
 <script src="app.js"></script>
 
 </body>
-
 </html>
